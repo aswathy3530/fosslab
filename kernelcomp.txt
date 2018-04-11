@@ -1,0 +1,33 @@
+#downloading latest kernel
+wget http://www.kernel.org/pub/linux/kernel/v3.0/linux-4.16.1.tar.bz2
+
+
+#extracting source code
+tar xf linux-4.16.1.tar.bz2 
+cd linux-4.16.1  #contains files like arch, fs
+
+#configuration file
+cp /boot/config-4.10.0-28-generic      .config 
+
+#provide help
+make help
+#gui option
+sudo apt-get install bison 
+sudo apt-get install flex
+make menuconfig
+
+sudo apt-get install libgtk2.0-dev
+sudo apt-get install libglad2-dev
+make gconfig
+
+sudo apt-get install qt-dev
+make xconfig
+
+#compile kernel
+sudo apt-get install    kernel-package    libncurses5-dev
+make-kpkg --initrd --append-to-version=-kernew    kernel_image     kernel_headers
+
+#install debian files
+
+
+
