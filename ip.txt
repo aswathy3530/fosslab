@@ -1,0 +1,8 @@
+ifconfig -a
+ifconfig wlo1
+sudo ifconfig wlo1 192.168.1.170
+ifconfig -a
+sudo ifconfig eno1 192.168.1.170 netmask 255.255.252.0
+sudo route add default gw 192.168.0.8
+sudo nano /etc/resolv.conf 
+
