@@ -1,0 +1,21 @@
+#Installing LAMP
+
+sudo apt-get update 
+sudo apt-get install apache2    #install apache
+
+
+sudo apt-get install mysql-server #install MySQL
+mysql_secure_installation 
+mysql -u -root -p   #MySQL login 
+
+#install php
+sudo apt -get install php libapache2-mod-php php-mcrypt php-mysql
+sudo nano /etc/apache2mods-enabled/dir.conf
+sudo systemct1 restart apache2
+sudo systemctl status apache2
+
+#creating php
+sudo nano /var/www/html/info.php
+
+http://localhost/info.php
+
