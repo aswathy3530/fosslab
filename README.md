@@ -7,4 +7,5 @@ Networking task : To change ip addres.. use of ifconfig ,route,resolv
 LAMP Stack installation , basics of php ,perl
 Package Management
 Perl : Basics
+Kernel Compilation
 Other : Calculator using shell scripting 
